@@ -3,8 +3,8 @@
 body {
     background-color: rgb(144, 211, 216);
     width: 1024;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 
@@ -23,4 +23,3 @@ li:active {
 .lista-motivos {
     list-style: none;
 }
-
