@@ -1,0 +1,7 @@
+div:nth-child(3) {
+   font-size: 3em;
+}
+
+div:nth-child(5) {
+    color: red;
+ }
