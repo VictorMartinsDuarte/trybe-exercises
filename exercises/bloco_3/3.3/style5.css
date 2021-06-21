@@ -1,0 +1,7 @@
+.ul1 :nth-child(-n+3) {
+    color: green;
+}
+
+.bg-pink {
+    background-color: pink;
+}
