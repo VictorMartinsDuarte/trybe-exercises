@@ -15,5 +15,4 @@ switch (piece) {
         break;
     default:
         console.log("Error");
-        break;
 }
