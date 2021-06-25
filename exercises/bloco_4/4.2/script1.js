@@ -35,6 +35,11 @@ let qntImpares = 0;
 
 for (let index = 0; index < numbers.length; index += 1) {
     if ((numbers[index] % 2) != 0) {
-        
+        qntImpares += 1
     }
+}
+if (qntImpares === 0) {
+    console.log("Nenhum valor ímpar encontrado.");
+} else {
+    console.log(qntImpares);
 }
