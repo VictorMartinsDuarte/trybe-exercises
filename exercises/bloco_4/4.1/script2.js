@@ -1,9 +1,8 @@
-let patientId = 50;
-let isEnrolled = true;
-const patientInfo = {
-  firstName: 'Ana',
-  lastName: 'Santos',
-};
-const patientEmail = 'ana@email.com';
+let a = 10;
+let b = 2;
 
-console.log(patientEmail);
+if (a > b) {
+    console.log(a);
+} else {
+    console.log(b);
+}
