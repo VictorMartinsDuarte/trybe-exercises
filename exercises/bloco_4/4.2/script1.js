@@ -21,12 +21,35 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 //     console.log("Valor menor ou igual a 20.");
 // }
 
-let maiorNumber = 0;
+// let maiorNumber = 0;
+
+// for (let index = 0; index < numbers.length; index += 1) {
+//     if (maiorNumber < numbers[index]) {
+//         maiorNumber = numbers[index];
+//     }
+// }
+
+// console.log(maiorNumber);
+
+// let qntImpares = 0;
+
+// for (let index = 0; index < numbers.length; index += 1) {
+//     if ((numbers[index] % 2) != 0) {
+//         qntImpares += 1
+//     }
+// }
+// if (qntImpares === 0) {
+//     console.log("Nenhum valor ímpar encontrado.");
+// } else {
+//     console.log(qntImpares);
+// }
+
+let menorNumber = numbers[0];
 
 for (let index = 0; index < numbers.length; index += 1) {
-    if (maiorNumber < numbers[index]) {
-        maiorNumber = numbers[index];
+    if (numbers[index] < menorNumber) {
+        menorNumber = numbers[index];
     }
 }
 
-console.log(maiorNumber);
+console.log(menorNumber);
