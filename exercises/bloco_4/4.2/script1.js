@@ -31,15 +31,25 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // console.log(maiorNumber);
 
-let qntImpares = 0;
+// let qntImpares = 0;
+
+// for (let index = 0; index < numbers.length; index += 1) {
+//     if ((numbers[index] % 2) != 0) {
+//         qntImpares += 1
+//     }
+// }
+// if (qntImpares === 0) {
+//     console.log("Nenhum valor ímpar encontrado.");
+// } else {
+//     console.log(qntImpares);
+// }
+
+let menorNumber = numbers[0];
 
 for (let index = 0; index < numbers.length; index += 1) {
-    if ((numbers[index] % 2) != 0) {
-        qntImpares += 1
+    if (numbers[index] < menorNumber) {
+        menorNumber = numbers[index];
     }
 }
-if (qntImpares === 0) {
-    console.log("Nenhum valor ímpar encontrado.");
-} else {
-    console.log(qntImpares);
-}
+
+console.log(menorNumber);
