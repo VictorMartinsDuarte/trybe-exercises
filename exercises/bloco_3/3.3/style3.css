@@ -1,0 +1,25 @@
+
+
+body {
+    background-color: rgb(144, 211, 216);
+    width: 1024;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+h1, p, li {
+    text-align: center;
+}
+
+li:hover {
+    background-color: greenyellow;
+}
+
+li:active {
+    color: rgb(240, 6, 45);
+}
+
+.lista-motivos {
+    list-style: none;
+}
