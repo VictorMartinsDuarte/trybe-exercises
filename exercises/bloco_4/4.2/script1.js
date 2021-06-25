@@ -10,4 +10,7 @@ for (let index = 0; index < numbers.length; index += 1) {
     sumNumbers = sumNumbers + numbers[index];
 }
 
-console.log(sumNumbers);
+// console.log(sumNumbers);
+
+let average = (sumNumbers/numbers.length);
+console.log(average);
