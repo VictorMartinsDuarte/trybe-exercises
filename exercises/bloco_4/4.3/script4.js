@@ -4,7 +4,7 @@ let n = 5;
 
 for (let index = (n-1); index >= 0; index -= 2) {
     linha = '';
-    for(let columnI = 1; i <= index; columnI += 2){
+    for(let columnI = 1; columnI <= index; columnI += 2){
         linha += ' ';
 }
     for (let i = index; i < n; i += 1) {
