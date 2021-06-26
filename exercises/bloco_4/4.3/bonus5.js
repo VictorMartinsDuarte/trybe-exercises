@@ -1,3 +1,5 @@
+// 5- Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de n será sempre ímpar:
+
 let n = 7;
 let meio = (n + 1) / 2;
 let ladoEsq = meio;
@@ -6,9 +8,12 @@ let asterisco = "*";
 
 for (let limiteLinha = 1; limiteLinha <= meio; limiteLinha += 1) {
     let resultado = "";
+
     for (let coluna = 1; coluna <= n; coluna += 1) {
+
         if (coluna == ladoEsq || coluna == ladoDir || limiteLinha == meio) {
             resultado += asterisco;
+            
         } else {
             resultado += " ";
         }

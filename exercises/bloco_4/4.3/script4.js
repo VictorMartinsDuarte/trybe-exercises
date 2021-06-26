@@ -1,14 +1,15 @@
 // 4- Depois, faça uma pirâmide com n asteriscos de base:
 
-let n = 5;
+let n = 7;
 
-for (let index = (n-1); index >= 0; index -= 2) {
-    linha = '';
-    for(let colunaVazia = 1; colunaVazia <= index; colunaVazia += 2){
-        linha += ' ';
-}
-    for (let colunaAsterisco = index; colunaAsterisco < n; colunaAsterisco += 1) {
-        linha += '*';
-} 
-    console.log(linha);
+for (let qntLinhas = 0; qntLinhas < n; qntLinhas += 2) {
+    let resultado = "";
+    
+    for (let espaçosVazios = 1; espaçosVazios < (n - qntLinhas); espaçosVazios += 2) {
+        resultado += " ";
+    }
+    for (let asteriscos = (n + qntLinhas); asteriscos > (n-1); asteriscos -= 1) {
+        resultado += "*";
+    }
+    console.log(resultado);
 }

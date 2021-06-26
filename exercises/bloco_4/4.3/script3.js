@@ -2,18 +2,16 @@
 
 let n = 5;
 
-for (let index = 1; index <= n; index += 1) {
-    let line = "";
-    let asterisco = n - index;
+for (let limiteDaLinha = 1; limiteDaLinha <= n; limiteDaLinha += 1) {
+    let resultado = "";
 
-    for (let index2 = 0; index2 < n; index2 += 1) { 
-        if (line.length < asterisco) {
-            line += " ";
+    for (let vaziosNaLinha = n; vaziosNaLinha >= 1; vaziosNaLinha -= 1) {
+        if (limiteDaLinha < vaziosNaLinha) {
+            resultado += " ";
         } else {
-            line += "*";
-        }  
+            resultado += "*";
+        }
     }
-    console.log(line);
+    console.log(resultado);
 }
-
 // Atenção! Note que esse exercício é bem mais complexo que o anterior! Não basta, aqui, imprimir somente asteriscos. Você precisará de uma lógica para imprimir espaços também.
