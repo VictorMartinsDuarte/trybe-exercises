@@ -4,10 +4,10 @@ let n = 5;
 
 for (let index = (n-1); index >= 0; index -= 2) {
     linha = '';
-    for(let columnI = 1; columnI <= index; columnI += 2){
+    for(let colunaVazia = 1; colunaVazia <= index; colunaVazia += 2){
         linha += ' ';
 }
-    for (let i = index; i < n; i += 1) {
+    for (let colunaAsterisco = index; colunaAsterisco < n; colunaAsterisco += 1) {
         linha += '*';
 } 
     console.log(linha);
