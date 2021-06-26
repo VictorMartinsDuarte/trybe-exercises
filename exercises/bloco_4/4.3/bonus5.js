@@ -2,24 +2,23 @@
 
 let n = 7;
 let meio = (n + 1) / 2;
-let ladoEsq = meio;
-let ladoDir = meio;
-let asterisco = "*";
 
-for (let limiteLinha = 1; limiteLinha <= meio; limiteLinha += 1) {
+for (let altura = 0; altura < meio; altura += 1) {
     let resultado = "";
-
-    for (let coluna = 1; coluna <= n; coluna += 1) {
-
-        if (coluna == ladoEsq || coluna == ladoDir || limiteLinha == meio) {
-            resultado += asterisco;
-            
+    for (let posicaoNaLinha = 1; posicaoNaLinha <= n; posicaoNaLinha += 1) {
+        if (posicaoNaLinha === (meio + altura) || posicaoNaLinha === (meio - altura) || altura === (meio - 1)) {
+            resultado += "*";
         } else {
             resultado += " ";
         }
     }
-
-    ladoEsq -= 1;
-    ladoDir += 1;
     console.log(resultado);
 }
+
+// Por último, façamos com que a variável seja incrementada com o valor correspondente a cada loop;
+// n = 7
+
+//    *
+//   * *
+//  *   *
+// *******
