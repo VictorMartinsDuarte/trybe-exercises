@@ -44,7 +44,7 @@ let info2 = {
 };
 
 for (let index in info, info2) {
-    if (info[index] === info2[index]) {
+    if (info[index].toLowerCase() === info2[index].toLowerCase() && index === index) {
         console.log('Ambos recorrentes');
     } else {
         console.log(info[index] + ' e ' + info2[index]);
