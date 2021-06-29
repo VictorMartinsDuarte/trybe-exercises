@@ -44,3 +44,17 @@ console.log(verificaMaior(number));
 // * Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']; .
 // * Valor esperado no retorno da função: Fernanda .
 
+let names = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+let maiorNome = 'a';
+let teste = 0;
+
+    function testeNome(a) {
+        for (let index of a) {
+            let nomeDoMomento = index;
+            if (nomeDoMomento.length > maiorNome.length) {
+                maiorNome = index;
+            }
+        }
+        return maiorNome;
+    }
+console.log(testeNome(names));
