@@ -59,20 +59,21 @@
         mudaBgCenter('white');
 
         function mudaTextoH1 (text) {
-            document.getElementsByClassName('title')[0].innerText = text;
+            document.getElementsByTagName('h1')[0].innerText = text;
         }
         mudaTextoH1('Exercício 5.1 - JavaScript');
 
         function maiusculoP() {
-          document.getElementsByTagName('p')[0].style.textTransform = 'uppercase';
-          // document.getElementsByTagName('p')[0].innerText = document.getElementsByTagName('p')[0].innerText.toUpperCase(); ***Forma alternativa
+          document.getElementsByTagName('p')[0].innerText = document.getElementsByTagName('p')[0].innerText.toUpperCase(); 
+          // document.getElementsByTagName('p')[0].style.textTransform = 'uppercase'; 
+          // ***Forma alternativa - Que acrescenta uma modificação 'style - inLine'
         }
         maiusculoP();
 
         function allTagsP () {
-            let arrayP = document.getElementsByTagName('p')
+            let arrayP = document.getElementsByTagName('p');
             for (let index = 0; index < arrayP.length; index += 1 ) {
-                console.log(arrayP[index]);
+              console.log(arrayP[index]);
             // "inner.Html" retorna o conteúdo das tags, mas diferencia <strong></strong>, <span></span> styles e afins. "innerText" traz só texto mesmo.
             }
         }
