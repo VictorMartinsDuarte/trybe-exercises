@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let rootBody = document.body;
+      // 1. Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
+      let h1 = document.createElement('h1');
+      rootBody.appendChild(h1);
+      h1.innerText = 'Exercício 5.2 - JavaScript DOM';
+      // document.querySelector('body').appendChild(document.createElement('h1')).innerText = 'Exercício 5.2 - JavaScript DOM'; *** Maneira alternativa, que seleciona o local de criação do elemento e já cria esse mesmo elemento com informação dentro.
+      // 2. Adicione a tag div com a classe main-content como filho da tag body;
+      let div1 = document.createElement('div');
+      div1.classList.add('main-content');
+      rootBody.appendChild(div1);
+      // document.querySelector('body').appendChild(document.createElement('div')).classList.add('main-content'); 
+      // *** Modo alternativo e compacto.
+      // 3. Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+      let div1_1 = document.createElement('div');
+      div1_1.classList.add('center-content');
+      div1.appendChild(div1_1);
+      // document.body.querySelector
+      // document.body.querySelector('div').appendChild(document.createElement('div')).classList.add('center-content');
+      // 4. Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+      let div1_1_P = document.createElement('p');
+      // document.body.querySelector('div').querySelector('div').appendChild(div1_1_P);
+      div1_1.appendChild(div1_1_P);
+      // 5. Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+      let div1_2 = document.createElement('div');
+      div1.appendChild(div1_2).classList.add('left-content');
+      // 6. Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+      let div1_3 = document.createElement('div');
+      div1.appendChild(div1_3).classList.add('right-content');
+      // 7. Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do div criado no passo 5;
+      let div1_2Img = document.createElement('img');
+      div1_2.appendChild(div1_2Img);
+      div1_2Img.className = 'small-image';
+      // div1_2Img.src = 'https://picsum.photos/200';
+      // div1_2Img.setAttribute("src", "https://picsum.photos/200"); *** 1ª Alternativa
+      // div1_2Img.src = 'https://picsum.photos/200'; *** 2ª Alternativa
+      // 8. Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+      let div1_3_Ul = document.createElement('ul');
+      div1_3.appendChild(div1_3_Ul);
+      let textNumbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+      for (let index = 0; index < 10; index += 1) {
+        let div1_3_Ul_Li = document.createElement('li')
+        div1_3_Ul.appendChild(div1_3_Ul_Li);
+        document.querySelectorAll('li')[index].innerText = textNumbers[index];
+      }
+      
+    </script>
+  </body>
+</html>
