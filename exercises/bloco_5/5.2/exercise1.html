@@ -89,8 +89,8 @@
       let div1_2Img = document.createElement('img');
       div1_2.appendChild(div1_2Img);
       div1_2Img.className = 'small-image';
-      // div1_2Img.src = 'https://picsum.photos/200';
-      // div1_2Img.setAttribute("src", "https://picsum.photos/200"); *** 1ª Alternativa
+      div1_2Img.src = 'https://picsum.photos/200';
+      // div1_2Img.setAttribute("src", "https://picsum.photos/200"); *** 1ª Alternativa - Dica do Michael C.
       // div1_2Img.src = 'https://picsum.photos/200'; *** 2ª Alternativa
       // 8. Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
       let div1_3_Ul = document.createElement('ul');
@@ -101,7 +101,21 @@
         div1_3_Ul.appendChild(div1_3_Ul_Li);
         document.querySelectorAll('li')[index].innerText = textNumbers[index];
       }
-      
+      // for(let index = 0; index < 10; index += 1){
+      //   let div1_3_Ul_Li = document.createElement('li');
+      //   div1_3_Ul_Li.innerHTML = textNumbers[index];
+      //   div1_3_Ul.appendChild(div1_3_Ul_Li);
+      // } // *** Alternativa bolada pelo Wellington
+      // for (let index of textNumbers) {
+      //   let divl_3_Ul_Li = document.createElement('li');
+      //   divl_3_Ul_Li.innerText = index;
+      //   divl_3_Ul.appendChild(div1_3_Ul_L1);
+      // } // *** Alternativa bolada pelo Michael C., conferir se roda no pc dele, e por quê?
+      // 9. Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
+      for (let index = 0; index < 3; index += 1) {
+        let div1_h3 = document.createElement('h3');
+        div1.appendChild(div1_h3);
+      }
     </script>
   </body>
 </html>
