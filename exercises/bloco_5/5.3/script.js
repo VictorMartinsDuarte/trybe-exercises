@@ -135,7 +135,7 @@ function zoomOut() {
 //     })
 //   }
 // };
-// zoomOut(); *** Alternativa minha
+// zoomOut(); // *** Alternativa minha
 
 // Ex7.: Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
@@ -160,3 +160,15 @@ function subtitleTaskColor(a) {
   bgColorTasks.style.backgroundColor = a;
 }
 subtitleTaskColor('green');
+
+// Ex9.: Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
+// Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
+
+document.querySelector('.task').addEventListener('click', function() {
+  let task1 = document.querySelector('.my-tasks').querySelector('span');
+  if (task1.className == 'task-selected') {
+    task1.classList.remove('task-selected');
+  } else {
+    task1.className = 'task-selected';
+  }
+});
