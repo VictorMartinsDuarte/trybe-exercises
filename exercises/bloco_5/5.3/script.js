@@ -39,4 +39,32 @@ for (element of dezDaysList) {
     ulDaysLi.className += ' friday';
   }
 } 
-// *** Alternativa - Giovanni N.
+// *** Alternativa - Giovanni N. = Uso do for/of
+
+// Ex2.: Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
+// Adicione a este botão a ID "btn-holiday" .
+// Adicione este botão como filho/filha da tag <div> com classe "buttons-container".
+
+function newButton(a) {
+  let divButtons = document.querySelector('.buttons-container');
+  let createButton = document.createElement('button');
+  divButtons.appendChild(createButton).id = 'btn-holiday';
+  createButton.innerText = a;
+  // document.querySelector('.buttons-container').appendChild(document.querySelector)
+}
+newButton('Feriados');
+
+// Ex3.: Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
+// É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
+function addClick() {
+  document.querySelector('#btn-holiday').addEventListener('click', function () {
+    let daysHoliday = document.querySelectorAll('.holiday');
+    for (let index = 0; index < daysHoliday.length; index += 1)
+      if (daysHoliday[index].style.backgroundColor == 'red') {
+        daysHoliday[index].style.backgroundColor = 'rgb(238,238,238)';
+      } else {
+      daysHoliday[index].style.backgroundColor = 'red';
+      }
+  });
+}
+addClick();
