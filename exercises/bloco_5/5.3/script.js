@@ -17,7 +17,7 @@ createDaysOfTheWeek();
 // Ex1.: O array dezDaysList contém os dois últimos dias de novembro e os dias do mês de dezembro. Desenvolva uma função que crie dinamicamente cada dia do calendário e os adicione como filhos/filhas da tag <ul> com ID "days" . Note que os dias 29 e 30 de novembro estão no array pois representam respectivamente Domingo e Segunda-feira.
 
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-// domingo, segunda....
+
 const ulDays = document.querySelector('#days');
 
 // Os dias devem estar contidos em uma tag <li> , e todos devem ter a classe day . Ex: <li class="day">3</li>
@@ -30,7 +30,7 @@ for (element of dezDaysList) {
   let ulDaysLi = document.createElement('li');
   ulDays.appendChild(ulDaysLi);
   ulDaysLi.innerText = element;
-  ulDaysLi.className = 'days';
+  ulDaysLi.className = 'day';
   
   if (element == 24 || element == 25 || element == 31) {
     ulDaysLi.className += ' holiday'; //ou li.className = 'day holiday'
@@ -102,3 +102,61 @@ function changeTextFriday(a) {
   // }) *** Alternativa bolada pelo Giovanni Nunes
 }
 changeTextFriday('Sextou!');
+
+// Ex6.: Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+// Dica - Propriedade: event.target .
+
+function zoomIn() {
+  ulDays.addEventListener('mouseover', function (event) {
+    event.target.style.fontSize = '2em';
+  })
+}  zoomIn();
+
+function zoomOut() {
+  ulDays.addEventListener('mouseout', function (event) {
+    event.target.style.fontSize = '1em';
+  })
+}  zoomOut(); 
+// *** Alternativa bolada pelo Giovanni Nunes
+
+// let ulDaysLi = document.querySelectorAll('.day');
+// function zoomIn() {
+//   for (let content of ulDaysLi) {
+//     content.addEventListener('mouseover', function () {
+//       content.style.fontSize = '2em';
+//     })
+//   }
+// };
+// zoomIn();
+// function zoomOut() {
+//   for (let content of ulDaysLi) {
+//     content.addEventListener('mouseout', function () {
+//       content.style.fontSize = '';
+//     })
+//   }
+// };
+// zoomOut(); *** Alternativa minha
+
+// Ex7.: Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
+
+function createTask(a) {
+  let taskDiv = document.querySelector('.my-tasks');
+  let newTask = document.createElement('span');
+  taskDiv.appendChild(newTask).innerText = a;
+  // newTask.appendChild(document.createElement('br')); // Dica do Giovanni Nunes
+}
+createTask('Cozinhar');
+// createTask('Limpar a Casa');
+
+// Ex8.: Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior. Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task .
+// O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
+
+function subtitleTaskColor(a) {
+  let taskDiv = document.querySelector('.my-tasks');
+  let bgColorTasks = document.createElement('div')
+  taskDiv.appendChild(bgColorTasks).className = 'task';
+  bgColorTasks.style.backgroundColor = a;
+}
+subtitleTaskColor('green');
