@@ -181,12 +181,13 @@ document.querySelector('.task').addEventListener('click', function(event) {
 // Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) .
 
 function changeDayColor() {
+  let pathColor = document.querySelector('.task').style.backgroundColor;
   for (let content of ulDaysLi) {
     content.addEventListener('click', function () {
-      if (document.querySelector('.task').className == 'task selected' && content.style.backgroundColor == 'green') {
+      if (document.querySelector('.task').className == 'task selected' && content.style.backgroundColor == pathColor) {
         content.style.backgroundColor = 'rgb(238,238,238)';
       } else if (document.querySelector('.task').className == 'task selected'){ 
-        content.style.backgroundColor = 'green';
+        content.style.backgroundColor = pathColor;
       }
     })
   }
