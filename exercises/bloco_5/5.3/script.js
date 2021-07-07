@@ -92,16 +92,36 @@ function changeTextFriday(a) {
         daysFriday[index].innerText = a;
       }
     }})
-  //   for (let content of daysFriday) {
+}
+changeTextFriday('Sextou!');
+
+ //   for (let content of daysFriday) {
   //     if (content.innerText == 4 || content.innerText == 11 || content.innerText == 18 || content.innerText == 25) {
   //       content.innerText = a;
   //     } else {
   //       content.innerText = parseInt(content.nextElementSibling.innerText - 1);
   //     }
   //   }
-  // }) *** Alternativa bolada pelo Giovanni Nunes
-}
-changeTextFriday('Sextou!');
+  // }) // *** Alternativa bolada pelo Giovanni Nunes
+
+// document.querySelector('#btn-friday').addEventListener("click", changeTextFridayDays);
+
+// function changeTextFridayDays () {
+//   let fridayDays = document.querySelectorAll('.friday');
+
+//   for (let index = 0; index < fridayDays.length; index += 1) {
+//     let originalText = parseInt(fridayDays[index].nextElementSibling.innerText - 1);
+
+//     if (fridayDays[index].innerText != "It's Friday!") {
+//       fridayDays[index].style.backgroundColor = "yellow";
+//       fridayDays[index].innerText = "It's Friday!"
+//     } else {
+//       fridayDays[index].innerHTML = originalText;
+//       fridayDays[index].style.backgroundColor = "rgb(238,238,238)";
+//     }
+//   } 
+// } // *** Alternativa da Juliana Braga. Code review com o Giovanni Nunes
+
 
 // Ex6.: Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
 // Dica - Propriedade: event.target .
@@ -192,3 +212,30 @@ function changeDayColor() {
     })
   }
 }; changeDayColor();
+
+// Bônus:
+// Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
+// Se nenhum caractere for inserido no campo input , a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
+// Ao pressionar a tecla "enter" o evento também deverá ser disparado.
+// Dica - Propriedade: keyCode .
+let btnCommitment = document.querySelector('#btn-add');
+let textCommitment = document.querySelector('#task-input');
+
+textCommitment.addEventListener('keydown', function(event){
+  if (event.which == '13' && textCommitment.value == '') {
+    alert('Erro! Preencha a caixa de texto.')
+  } else if (event.which == '13') {
+    let newCommitment = document.createElement('div');
+    document.querySelector('.input-container').appendChild(newCommitment)
+    newCommitment.innerText = textCommitment.value;
+  }
+});
+btnCommitment.addEventListener('click', function(){
+  let newCommitment = document.createElement('div');
+  document.querySelector('.input-container').appendChild(newCommitment)
+  if (textCommitment.value == '') {
+    alert('Erro! Preencha a caixa de texto.')
+  } else {
+    newCommitment.innerText = textCommitment.value;
+  }
+});
