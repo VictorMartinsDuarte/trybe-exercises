@@ -106,36 +106,35 @@ changeTextFriday('Sextou!');
 // Ex6.: Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
 // Dica - Propriedade: event.target .
 
-function zoomIn() {
-  ulDays.addEventListener('mouseover', function (event) {
-    event.target.style.fontSize = '2em';
-  })
-}  zoomIn();
+// function zoomIn() {
+//   ulDays.addEventListener('mouseover', function (event) {
+//     event.target.style.fontSize = '2em';
+//   })
+// }  zoomIn();
 
-function zoomOut() {
-  ulDays.addEventListener('mouseout', function (event) {
-    event.target.style.fontSize = '1em';
-  })
-}  zoomOut(); 
+// function zoomOut() {
+//   ulDays.addEventListener('mouseout', function (event) {
+//     event.target.style.fontSize = '1em';
+//   })
+// }  zoomOut(); 
 // *** Alternativa bolada pelo Giovanni Nunes
 
-// let ulDaysLi = document.querySelectorAll('.day');
-// function zoomIn() {
-//   for (let content of ulDaysLi) {
-//     content.addEventListener('mouseover', function () {
-//       content.style.fontSize = '2em';
-//     })
-//   }
-// };
-// zoomIn();
-// function zoomOut() {
-//   for (let content of ulDaysLi) {
-//     content.addEventListener('mouseout', function () {
-//       content.style.fontSize = '';
-//     })
-//   }
-// };
-// zoomOut(); // *** Alternativa minha
+let ulDaysLi = document.querySelectorAll('.day');
+function zoomIn() {
+  for (let content of ulDaysLi) {
+    content.addEventListener('mouseover', function () {
+      content.style.fontSize = '2em';
+    })
+  }
+}; zoomIn();
+function zoomOut() {
+  for (let content of ulDaysLi) {
+    content.addEventListener('mouseout', function () {
+      content.style.fontSize = '';
+    })
+  }
+}; zoomOut(); 
+// *** Alternativa minha
 
 // Ex7.: Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
@@ -164,11 +163,31 @@ subtitleTaskColor('green');
 // Ex9.: Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
 // Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
 
-document.querySelector('.task').addEventListener('click', function() {
-  let task1 = document.querySelector('.my-tasks').querySelector('span');
-  if (task1.className == 'task-selected') {
-    task1.classList.remove('task-selected');
+document.querySelector('.task').addEventListener('click', function(event) {
+  // let task1 = document.querySelector('.task');
+  // if (task1.className == 'task selected') {
+  //   task1.classList.remove('selected');
+  // } else {
+  //   task1.className = 'task selected';
+  // } // *** Alternativa sem event.target
+  if (event.target.className == 'task selected') {
+    event.target.classList.remove('selected');
   } else {
-    task1.className = 'task-selected';
+    event.target.classList = 'task selected';
   }
 });
+
+// Ex10.: Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
+// Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) .
+
+function changeDayColor() {
+  for (let content of ulDaysLi) {
+    content.addEventListener('click', function () {
+      if (document.querySelector('.task').className == 'task selected' && content.style.backgroundColor == 'green') {
+        content.style.backgroundColor = 'rgb(238,238,238)';
+      } else if (document.querySelector('.task').className == 'task selected'){ 
+        content.style.backgroundColor = 'green';
+      }
+    })
+  }
+}; changeDayColor();
