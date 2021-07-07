@@ -20,10 +20,16 @@ secondDiv.addEventListener('click', classTech)
 thirdDiv.addEventListener('click', classTech)
 //  Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
-function changeText (a) {
-document.querySelector('.tech').innerText = a.target.value;
-}
-input.addEventListener('input', changeText)
+// function changeText (a) {
+// document.querySelector('.tech').innerText = a.target.value;
+// }
+// input.addEventListener('input', changeText) *** Alternativa atalho
+function techText (){
+  let tech = document.querySelector('.tech');
+  tech.innerText = input.value;
+  }
+  input.addEventListener('keyup', techText); 
+// *** Alternativa Vinicius S.
 //  Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 // 1. Que tal redirecionar para seu portifólio?
