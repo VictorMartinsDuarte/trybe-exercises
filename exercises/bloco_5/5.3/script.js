@@ -56,18 +56,16 @@ newButton('Feriados');
 
 // Ex3.: Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
-function addClick() {
-  document.querySelector('#btn-holiday').addEventListener('click', function () {
-    let daysHoliday = document.querySelectorAll('.holiday');
-    for (let index = 0; index < daysHoliday.length; index += 1)
-      if (daysHoliday[index].style.backgroundColor == 'red') {
-        daysHoliday[index].style.backgroundColor = 'rgb(238,238,238)';
-      } else {
-      daysHoliday[index].style.backgroundColor = 'red';
-      }
-  });
-}
-addClick();
+
+ocument.querySelector('#btn-holiday').addEventListener('click', function () {
+  let daysHoliday = document.querySelectorAll('.holiday');
+  for (let index = 0; index < daysHoliday.length; index += 1)
+    if (daysHoliday[index].style.backgroundColor == 'red') {
+      daysHoliday[index].style.backgroundColor = 'rgb(238,238,238)';
+    } else {
+    daysHoliday[index].style.backgroundColor = 'red';
+    }
+});
 
 // Ex4.: Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
 // Adicione a este botão o ID "btn-friday" .
@@ -128,7 +126,7 @@ changeTextFriday('Sextou!');
 
 // function zoomIn() {
 //   ulDays.addEventListener('mouseover', function (event) {
-//     event.target.style.fontSize = '2em';
+//     event.target.style.fontSize = '3em';
 //   })
 // }  zoomIn();
 
@@ -136,14 +134,14 @@ changeTextFriday('Sextou!');
 //   ulDays.addEventListener('mouseout', function (event) {
 //     event.target.style.fontSize = '1em';
 //   })
-// }  zoomOut(); 
+// }  zoomOut();
 // *** Alternativa bolada pelo Giovanni Nunes
 
 let ulDaysLi = document.querySelectorAll('.day');
 function zoomIn() {
   for (let content of ulDaysLi) {
     content.addEventListener('mouseover', function () {
-      content.style.fontSize = '2em';
+      content.style.fontSize = '3em';
     })
   }
 }; zoomIn();
