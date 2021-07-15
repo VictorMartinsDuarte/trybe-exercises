@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Exercise 6.1</title>
+</head>
+<body>
+  <main>
+    <form id="form1" action="" method="GET">
+    <fieldset>
+        <label for="input-name">Nome:</label>
+          <input id="input-name" type="text" name="name" maxlength="40" required>
+        <label for="input-email">E-mail:</label>
+          <input id="input-email" type="email" name="email" maxlength="50" required>
+        <label for="input-cpf">Digite seu CPF:</label>
+          <input id="input-cpf" type="text" name="cpf" maxlength="11" required>
+        <label for="input-address">Endereço:</label>
+          <input id="input-address" type="text" name="address" maxlength="200" required>
+        <label for="input-city">Cidade:</label>
+          <input id="input-city" type="text" name="city">
+        <label for="input-state">Estado:</label>
+          <select id="input-state" name="state" required></select>
+        <label for="radio-house">Casa</label>
+          <input id="radio-house" type="radio" name="input-radio" required>
+        <label for="radio-ap">Apartamento</label>
+          <input id="radio-ap" type="radio" name="input-radio" required>
+    </fieldset>
+    <fieldset>
+        <label for="text-resume">Resumo do currículo</label>
+          <textarea id="text-resume" name="resume" cols="30" rows="5" maxlength="1000" required></textarea>
+        <label for="input-role">Antigo cargo:</label>
+          <input id="input-role" type="text" name="role" maxlength="40" required>
+        <label for="role-description">Descreva sua função:</label>
+          <input id="role-description" type="text" name="role-description" maxlength="500" required>
+        <label for="input-date">Data de início:</label>
+          <input id="input-date" type="text" name="date" placeholder="Exemplo Dia/Mês/Ano" pattern="\d{1,2}/\d{1,2}/\d{4}" required>
+          <!-- <input type="date" name="" min="2015/06/01"> -->
+
+        <button id="submit-button" type="submit">Clique aqui para enviar</button>
+        <button id="reset-button" type="reset">Apagar Preenchimento</button>
+      </fieldset>
+    </form>
+  </main>
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</html>
