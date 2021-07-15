@@ -1,6 +1,5 @@
 let submitButton = document.querySelector('#submit-button');
-let tagForm = document.querySelector('#id-form')
-let divForm = document.querySelector('#form-data')
+let form1 = document.querySelector('#id-form')
 
 window.onload = () => {
   createStateOptions();
@@ -41,16 +40,48 @@ submitButton.addEventListener('click', (event) => {
 })
 
 // * Referência = https://www.learnwithjason.dev/blog/get-form-values-as-json
-function handleSubmit(event) {
-  event.preventDefault();
-  // const data = new FormData(event.target);
-  // const value = data.get('role');
-  // console.log({ value });
-  let data = {};
-  let dataContainer = document.querySelectorAll('input')[0];
-  for (let index = 0; index < dataContainer.maxLength; index += 1){
-  }
-  dataContainer.textContent = JSON.stringify(data, null, ' ');
-}
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   // const data = new FormData(event.target);
+//   // const value = data.get('role');
+//   // console.log({ value });
+//   let data = {};
+//   let dataContainer = document.querySelectorAll('input')[0];
+//   for (let index = 0; index < dataContainer.maxLength; index += 1){
+//   }
+//   dataContainer.textContent = JSON.stringify(data, null, ' ');
+// }
 
-tagForm.addEventListener('submit', handleSubmit);
+// tagForm.addEventListener('submit', handleSubmit);
+
+function saveData(event) {
+  event.preventDefault();
+  let arrayKey = ['Name: ', 'E-mail: ', 'CPF: ', 'Endereço: ', 'Cidade: ', 'Estado: ', 'Residência: ', 'Currículo: ', 'Cargo: ', 'Funções do Cargo: ', 'Data de Início: '];
+
+  let arrayValue = [];
+  arrayValue.push(document.querySelector("#input-name").value);
+  arrayValue.push(document.querySelector("#input-email").value);
+  arrayValue.push(document.querySelector("#input-cpf").value);
+  arrayValue.push(document.querySelector("#input-address").value);
+  arrayValue.push(document.querySelector("#input-city").value);
+  arrayValue.push(document.querySelector("#input-state").value);
+  arrayValue.push(document.querySelector("input[name='input-radio']:checked").value);
+  arrayValue.push(document.querySelector("input[name='input-radio']:checked").value);
+  arrayValue.push(document.querySelector("#text-resume").value);
+  arrayValue.push(document.querySelector("#input-role").value);
+  arrayValue.push(document.querySelector("#role-description").value);
+  arrayValue.push(document.querySelector("#input-date").value);
+    
+  let divForm = document.createElement('div');
+  document.querySelector('main').appendChild(divForm);
+  for (let index = 0; index < arrayKey.length; index += 1) {
+    let createP = document.createElement('p');
+    divForm.appendChild(createP);
+    createP.innerText = arrayKey[index] + arrayValue[index];
+  }
+
+  document.querySelector('form').reset();
+}
+submitButton.addEventListener('click', saveData);
+
+// * Referência para captar info dos radio buttons - https://stackoverflow.com/questions/15839169/how-to-get-value-of-selected-radio-button
