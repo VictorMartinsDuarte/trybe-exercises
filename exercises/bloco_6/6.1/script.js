@@ -58,7 +58,7 @@ submitButton.addEventListener('click', (event) => {
 
 function saveData(event) {
   event.preventDefault();
-  let arrayKey = ['Name: ', 'E-mail: ', 'CPF: ', 'Endereço: ', 'Cidade: ', 'Estado: ', 'Residência: ', 'Currículo: ', 'Cargo: ', 'Funções do Cargo: ', 'Data de Início: '];
+  let arrayKey = ['Name: ', 'E-mail: ', 'CPF: ', 'Endereço: ', 'Cidade: ', 'Estado: ', 'Trocar para variável: ', 'Currículo: ', 'Cargo: ', 'Funções do Cargo: ', 'Data de Início: '];
 
   let arrayValue = [];
   arrayValue.push(document.querySelector("#input-name").value);
@@ -67,7 +67,6 @@ function saveData(event) {
   arrayValue.push(document.querySelector("#input-address").value);
   arrayValue.push(document.querySelector("#input-city").value);
   arrayValue.push(document.querySelector("#input-state").value);
-  arrayValue.push(document.querySelector("input[name='input-radio']:checked").value);
   arrayValue.push(document.querySelector("input[name='input-radio']:checked").value);
   arrayValue.push(document.querySelector("#text-resume").value);
   arrayValue.push(document.querySelector("#input-role").value);
@@ -86,7 +85,7 @@ submitButton.addEventListener('click', saveData);
 
 cleanButton.addEventListener('click', () => {
   document.querySelector('#form1').reset();
-  document.querySelector('#formDataDiv').remove();
+  document.querySelector('.formDataDiv').remove();
 })
 
 // * Referência para captar info dos radio buttons - https://stackoverflow.com/questions/15839169/how-to-get-value-of-selected-radio-button
