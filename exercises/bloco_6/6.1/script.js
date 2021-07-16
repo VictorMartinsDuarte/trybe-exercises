@@ -1,11 +1,10 @@
 let submitButton = document.querySelector('#submit-button');
-let form1 = document.querySelector('#id-form');
+let form1 = document.querySelector('#id-form')
 let cleanButton = document.querySelector('#reset-button');
 
 window.onload = () => {
   createStateOptions();
 }
-
 function createStateOptions () {
   const stateList = ["Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro ", "Rio Grande do Norte", "Rio Grande do Sul ", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"];
   // for (let index = 0; index < stateList.length; index += 1) {
@@ -75,6 +74,7 @@ function saveData(event) {
     
   let divForm = document.createElement('div');
   document.querySelector('main').appendChild(divForm).classList.add('formDataDiv');
+
   for (let index = 0; index < arrayKey.length; index += 1) {
     let createP = document.createElement('p');
     divForm.appendChild(createP);
@@ -87,5 +87,4 @@ cleanButton.addEventListener('click', () => {
   document.querySelector('#form1').reset();
   document.querySelector('.formDataDiv').remove();
 })
-
 // * Referência para captar info dos radio buttons - https://stackoverflow.com/questions/15839169/how-to-get-value-of-selected-radio-button
