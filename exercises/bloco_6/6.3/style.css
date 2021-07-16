@@ -9,14 +9,20 @@
   background-color: rgb(53, 51, 51);
   color: white;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
   justify-content: space-around;
   align-items: center;
 }
 
 .header-img {
   width: 70px;
+}
+
+.section1 {
+  padding: 1%;
+  display: flex;
+  justify-content: center;
 }
 
 .gallery-img {
