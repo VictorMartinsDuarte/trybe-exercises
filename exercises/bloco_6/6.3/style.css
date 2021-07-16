@@ -6,6 +6,7 @@
 }
 
 #header {
+  width: 100%;
   background-color: rgb(53, 51, 51);
   color: white;
   display: flex;
@@ -19,6 +20,12 @@
   width: 70px;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #section1 {
   padding: 1%;
   display: flex;
@@ -26,13 +33,14 @@
 }
 
 #section2 {
+  width: 40%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.imgBack {
+.imgBackDiv {
   height: 230px;
   padding: 2%;
   margin: 0.5%;
