@@ -37,7 +37,6 @@ submitButton.addEventListener('click', (event) => {
   if(year < 1950 || year > 2021 || month < 1 || month > 12 || day < 1 || day > monthLength[month]) {
     alert('Insira um valor válido!')
   }
-
 })
 
 // * Referência = https://www.learnwithjason.dev/blog/get-form-values-as-json
