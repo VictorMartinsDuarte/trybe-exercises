@@ -20,13 +20,6 @@
   width: 70px;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
 #section1 {
   padding: 1%;
   display: flex;
@@ -40,8 +33,10 @@ body {
 }
 
 .skills {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -54,10 +49,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-h4 {
-  margin: 10% 0px 5% 0px;
+  justify-content: center;
 }
 
 .gallery-img {
