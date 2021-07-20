@@ -1,0 +1,21 @@
+body {
+
+}
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+
+}
+
+p {
+  font-size: 1.3em;
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 20px;
+}
