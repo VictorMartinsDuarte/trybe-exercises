@@ -54,3 +54,14 @@ flex-basis - xx%
 z-index
 
 6.5 CSS Responsivo - Mobile First
+
+7.1
+O ESlint aponta para trocar o 'let' por 'const' no caso: let criandoElementoX = document.createElement('x'); / mesmo que eu coloque caminhoElemento.appendChild(criandoElementoX); / e após esse appendChild, a variável fica com o valor do caminho para o próprio elemento criado, e achei que 'const' impediria essa mudança.
+
+Oi, Victor! Nesse caso é porque você não está alterando o valor de criandoElementoX propriamente dito. Você está acessando uma função de um elemento HTML armazenado em criandoElementoX. Seria parecido com o código que o Hugo executou na aula adicionando uma propriedade ao objeto person, mesmo tendo criando o objeto utilizando const. Ou seja, ele não alterou o valor de person propriamente dito, ele só adicionou uma propriedade ao objeto que está em person! Ficou nítido? :)
+
+7.2
+Slido aula:
+Pergunta: Estaria certo falar que o Array é um Objeto com as chaves anônimas/padronizadas? Ex.: O índice sempre 0,1,2,3...
+Resposta: Oi, Victor! Segundo o que consta na documentação, a definição de Array é: "Arrays são objetos semelhantes a listas que vêm com uma série de métodos embutidos para realizar operações de travessia e mutação. Nem o tamanho de um array JavaScript nem os tipos de elementos são fixos." Para mais informações, consulte aqui: developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
+Conclusão: Humm, esse parágrafo aqui esclareceu -> Arrays não podem usar strings como índices (como em um array associativo), devem ser usados números inteiros... No caso, eles têm obrigações padronizadas pro índice, e propriedades a mais. Obrigado!
