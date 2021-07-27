@@ -16,6 +16,7 @@ function myRemove(arr, item) {
 // b) Verifique se a chamada myRemove([1, 2, 3, 4], 3) não retorna o array [1, 2, 3, 4].
   assert.notDeepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 3, 4], 'Retornou [1, 2, 3, 4]');
 // c) Verifique se o array passado por parâmetro não sofreu alterações, após a função rodar.
-  assert.deepStrictEqual(myRemove([1, 2, 3, 4], 0), [1, 2, 3, 4], 'Modificou o array!');
+let newArr = myRemove([1, 2, 3, 4], 0);
+  assert.deepStrictEqual(newArr.length, 4, 'Modificou o array!');
 // d) Verifique se a chamada myRemove([1, 2, 3, 4], 5) retorna o array esperado.
   assert.deepStrictEqual(myRemove([1, 2, 3, 4], 5), [1, 2, 3, 4], 'Retornou o array esperado!');
