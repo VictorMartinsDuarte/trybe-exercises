@@ -65,3 +65,8 @@ Slido aula:
 Pergunta: Estaria certo falar que o Array é um Objeto com as chaves anônimas/padronizadas? Ex.: O índice sempre 0,1,2,3...
 Resposta: Oi, Victor! Segundo o que consta na documentação, a definição de Array é: "Arrays são objetos semelhantes a listas que vêm com uma série de métodos embutidos para realizar operações de travessia e mutação. Nem o tamanho de um array JavaScript nem os tipos de elementos são fixos." Para mais informações, consulte aqui: developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
 Conclusão: Humm, esse parágrafo aqui esclareceu -> Arrays não podem usar strings como índices (como em um array associativo), devem ser usados números inteiros... No caso, eles têm obrigações padronizadas pro índice, e propriedades a mais. Obrigado!
+
+8.1 JS-ES6 Higher Order Functions
+HOF = Função que utiliza outra como parâmetro, ou retorna uma função.
+
+Dica pra aula: Começar a utilizar nomes de parâmentros como 'a' ou 'b', letras únicas pra ficar menos confuso, quando for simplesmente a indicação de que deve receber o parâmetro.
