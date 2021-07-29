@@ -10,15 +10,17 @@ const studentGrade = (correctAnswers, verifyAnswers, checkAnswers) => {
 
 const checkAnswers = (a, b) => {
   let counter = 0;
+  let rightAnswers = 0;
   for (let index = 0; index < b.length; index += 1) {
     if (b[index] === 'N.A') {
       counter = counter;
     } else if (a[index] === b[index]) {
       counter += 1;
+      rightAnswers += 1;
     } else {
       counter -= 0.5;
     }
   }
-  return `Nota ${counter}!`;
+  return `Nota ${counter}, e ${rightAnswers} respostas corretas!`;
 };
 console.log(studentGrade(RIGHT_ANSWERS, STUDENT_ANSWERS, checkAnswers));
