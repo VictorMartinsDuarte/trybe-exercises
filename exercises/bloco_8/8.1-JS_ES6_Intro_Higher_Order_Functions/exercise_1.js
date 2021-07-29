@@ -19,4 +19,4 @@ const colaborador = (nomeCompleto) => {
 
 // console.log(newEmployees(colaborador('Pedro Guerra'), colaborador('Luiza Drumond'), colaborador('Carla Paiva')));
 // pra usar essa forma é necessário que o 'newEmployees' tenha 3 parâmetros (a, b, c) e os valores dos objetos sejam os parâmetros em ordem
-newEmployees(colaborador);
+console.log(newEmployees(colaborador));
