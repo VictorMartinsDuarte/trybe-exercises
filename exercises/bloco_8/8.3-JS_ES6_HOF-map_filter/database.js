@@ -61,7 +61,9 @@ const books = [
   },
 ];
 
-module.exports = books;
+module.exports = (
+  books
+);
 
 let anoAtual = new Date().getFullYear();
 console.log(anoAtual);
