@@ -14,9 +14,9 @@ const expectedResult = {
 };
 
 function longestNamedBook() {
-  return books.reduce((acc, curV) => acc.length < curV.name.length ? curV : acc, '');
+  return books.reduce((acc, curV) => acc.name.length < curV.name.length ? curV : acc);
 };
 
-assert.deepStrictEqual(longestNamedBook(), expectedResult);
+// assert.deepStrictEqual(longestNamedBook(), expectedResult);
 console.log(longestNamedBook());
 // console.log(books)
