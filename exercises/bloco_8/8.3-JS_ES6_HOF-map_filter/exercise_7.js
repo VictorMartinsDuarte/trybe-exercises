@@ -3,7 +3,7 @@ const books = require('./database');
 
 const expectedResult = 'O Senhor dos Anéis';
 
-
+// Desenvolvido junto com o Diogo Fiuza
 function authorWith3DotsOnName() { 
   return books.filter((value) => value.author.name).find((element, i) => {
     let counter = 0;
