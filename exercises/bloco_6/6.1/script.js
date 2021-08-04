@@ -37,7 +37,6 @@ submitButton.addEventListener('click', (event) => {
   if(year < 1950 || year > 2021 || month < 1 || month > 12 || day < 1 || day > monthLength[month]) {
     alert('Insira um valor válido!')
   }
-
 })
 
 // * Referência = https://www.learnwithjason.dev/blog/get-form-values-as-json
@@ -60,6 +59,10 @@ function saveData(event) {
   let arrayKey = ['Name: ', 'E-mail: ', 'CPF: ', 'Endereço: ', 'Cidade: ', 'Estado: ', 'Trocar para variável: ', 'Currículo: ', 'Cargo: ', 'Funções do Cargo: ', 'Data de Início: '];
 
   let arrayValue = [];
+  // let arrayDosInputs = document.querySelectorAll('input');
+  // for (let index = 0; index < arrayDosInputs.length; index++) {
+  //   arrayNovo.push(arrayDosInputs[index].value);
+  // }
   arrayValue.push(document.querySelector("#input-name").value);
   arrayValue.push(document.querySelector("#input-email").value);
   arrayValue.push(document.querySelector("#input-cpf").value);
