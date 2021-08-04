@@ -66,11 +66,11 @@ const books = [
 const expectedResult = false;
 
 function authorUnique() {
-  return books.every((a) => 
-    !books.some((b) => (a.author.birthYear === b.author.birthYear) && (a.id !== b.id)))
+  return books.every((currentBook) => 
+    !books.some((bookToBeCompared) => (currentBook.author.birthYear === bookToBeCompared.author.birthYear) && (currentBook.id !== bookToBeCompared.id)))
 };
 
 console.log(authorUnique());
 assert.strictEqual(authorUnique(), expectedResult);
 
-// Referência gabarito. Por que o !books.some retorna false sem o ponto de exclamação, mesmo quando a condição é atingida?
+// Referência gabookToBeComparedarito. Por que o !books.some retorna false sem o ponto de exclamação, mesmo quando a condição é atingida?
